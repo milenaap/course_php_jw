@@ -66,3 +66,28 @@ function dd($value){
 dd($_SERVER);
 
 ```
+
+# Ejemplo de clases
+
+```sh
+
+class Person {
+    public $name;
+    public $age;
+
+    public function breathe(){
+        
+        echo $this->name . ' is breathing!';
+    }
+
+
+}
+
+$person = new Person();
+
+$person->name = 'John Doe';
+$person->age = 40;
+
+dd($person->breathe());
+
+```

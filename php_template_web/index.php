@@ -1,28 +1,9 @@
 <?php
 
 require 'functions.php';
+// require 'router.php';
 
 
-$uri = parse_url($_SERVER['REQUEST_URI' ])['path'];
+// connect to our MySQL database
 
-
-$routes = [
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php',
-];
-
-function abort($code){
-    http_response_code($code);
-
-    require "views/{$code}.php";
-
-    die();
-
-}
-
-if (array_key_exists($uri, $routes)){
-    require $routes[$uri];
-} else {
-    abort();
-}
+new PDO($dns);
