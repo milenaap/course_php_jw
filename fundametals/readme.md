@@ -1,0 +1,46 @@
+# Project
+
+## Run Server
+
+```sh
+
+php -S localhost:8888
+
+
+
+
+```
+
+## Imprimir una variable de dos maneras:
+
+    <h1>
+        <?php echo $message; ?> --> con php y echo
+        <?=  $message; ?> --> sin php ni echo
+    </h1>
+
+# Array
+
+```sh
+
+ <?php
+    // foreach ($books as $book) {
+    //     echo "<li>$book</li>";
+    // }
+
+?>
+
+
+
+<?php foreach ($books as $book) : ?>
+    <li><?= $book ?></li>
+<?php endforeach;?>
+
+```
+
+# Solamente se renderiza el html y se coloca el end (los : y el end sustituyen los parentesis)
+
+```sh
+<?php foreach ($books as $book) : ?>
+    <li><?= $book ?></li>
+<?php endforeach;?>
+```
