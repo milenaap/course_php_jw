@@ -22,6 +22,12 @@
                     </a>
 
                      <a 
+                        href="/notes" 
+                        class="<?= urlIs('/notes')  ? 'bg-gray-900 text-white border-b-2 border-indigo-600' : 'text-gray-500' ?> inline-flex items-center  px-1 pt-1 text-sm font-medium dark:border-indigo-500 dark:text-white"
+                        >Notes
+                    </a>
+
+                     <a 
                         href="/contact" 
                         class="<?= urlIs('/contact') ? 'bg-gray-900 text-white border-b-2 border-indigo-600' : 'text-gray-500' ?> inline-flex items-center px-1 pt-1 text-sm font-medium dark:border-indigo-500 dark:text-white"
                         >Contact
