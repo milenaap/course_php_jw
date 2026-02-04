@@ -1,14 +1,16 @@
 <?php
 
 require 'functions.php';
-require 'router.php';
 require 'Database.php';
+require 'Response.php';
+require 'router.php';
 
 
-$config = require('config.php');
 
-// connect to our MySQL database
-$db = new Database($config['database']);
+
+
+
+
 
 // $id = $_GET['id'];
 // $query = "select * from posts where id = :id";

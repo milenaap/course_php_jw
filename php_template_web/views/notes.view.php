@@ -4,7 +4,15 @@
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <h1>Desde Notes</h1>
+        <?php foreach ($notes as $note) : ?>
+            <li>
+                <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:text-xl">
+
+                    <?= $note['body'] ?>
+
+                </a>
+            </li>
+        <?php endforeach; ?>
     </div>
 </main>
 </div>
