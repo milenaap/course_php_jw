@@ -1,13 +1,13 @@
 
 <?php
 
-class Database
-{
+class Database // la palabra reservada $this apunta a la clase 
+{ // Inicio del ámbito de la clase
 
     public $connection; // Se declara la variable
     public $statement;
 
-
+    // Constructor 
     public function __construct($config, $username = 'phpuser', $password = 'phppass')
     {
 
@@ -19,11 +19,8 @@ class Database
         ]);
     }
 
-
     public function query($query, $params = [])
     { // Inicio del ámbito de la función query()
-
-        
 
         $this->statement = $this->connection->prepare($query);
 
@@ -64,4 +61,4 @@ class Database
 
         return $result;
     }
-}
+} // Fin del ámbito de la clase
