@@ -1,5 +1,8 @@
-
 <?php
+
+namespace Core;
+
+use PDO;
 
 class Database // la palabra reservada $this apunta a la clase 
 { // Inicio del ámbito de la clase
