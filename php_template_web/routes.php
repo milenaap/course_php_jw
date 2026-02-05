@@ -1,10 +1,24 @@
 <?php
 
-return[
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/notes' => 'controllers/notes/index.php',
-    '/note' => 'controllers/notes/show.php',
-    '/notes/create' => 'controllers/notes/create.php',
-    '/contact' => 'controllers/contact.php',
-];
+// return[
+//     '/' => 'controllers/index.php',
+//     '/about' => 'controllers/about.php',
+//     '/notes' => 'controllers/notes/index.php',
+//     '/note' => 'controllers/notes/show.php',
+//     '/notes/create' => 'controllers/notes/create.php',
+//     '/contact' => 'controllers/contact.php',
+// ];
+
+// Rutas pricipales
+$router->get('/', 'controllers/index.php');
+$router->get('/about', 'controllers/about.php');
+$router->get('/contact', 'controllers/contact.php');
+
+// Notes
+$router->get('/notes', 'controllers/notes/index.php');          // Es para cargar las view de lista de las notas
+$router->get('/note','controllers/notes/show.php');             // Es para cargar la view de la nota
+$router->delete('/note', 'controllers/notes/destroy.php');      // Es para eliminar la nota
+
+
+$router->get('/notes/create', 'controllers/notes/create.php');  // Es para cargar la vista de la nota
+$router->post('/notes', 'controllers/notes/store.php');         // Es para guardar la nota

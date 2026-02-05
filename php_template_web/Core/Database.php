@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use Core\Response;
 use PDO;
 
 class Database // la palabra reservada $this apunta a la clase 
@@ -59,7 +60,7 @@ class Database // la palabra reservada $this apunta a la clase
         $result = $this->find();
 
         if (! $result) {
-            abort();
+            abort(Response::NOT_FOUND);
         }
 
         return $result;

@@ -18,7 +18,7 @@ php -S localhost:8888
         <?=  $message; ?> --> sin php ni echo
     </h1>
 
-# Array
+# Recorrer un Array
 
 ```sh
 
@@ -45,7 +45,6 @@ php -S localhost:8888
 <?php endforeach;?>
 ```
 
-
 # Herramienta de debug
 
 ```sh
@@ -54,11 +53,11 @@ php -S localhost:8888
 function dd($value){
 
     echo "<pre>";
-        
+
     var_dump($value);
-    
+
     echo "</pre>";
-    
+
     die();
 
 }
@@ -76,18 +75,84 @@ class Person {
     public $age;
 
     public function breathe(){
-        
+
         echo $this->name . ' is breathing!';
     }
-
-
 }
 
-$person = new Person();
 
+$person = new Person();
 $person->name = 'John Doe';
 $person->age = 40;
 
+
 dd($person->breathe());
+
+```
+
+# Array
+
+```sh
+
+1- Ejemplo de un array de una dimensión
+$arrayCountries = [
+    0 => 'España',
+    1 => 'Holanda'
+];
+
+echo $arrayCountries[0]; // Acceder al primer elemento anterior
+
+
+2- Ejemplo de array key => value
+$arrayKeyValue = [
+    'key1' => 'value1',
+    'key2' => 'value2'
+];
+
+echo $arrayKeyValue['key1'];
+
+
+3- Ejemplo de array dentro de otro array
+$array = [
+    'key1' => [
+        'keyInterno1' => 'valueInterno1',
+        'keyInterno2' => 'valueInterno2',
+    ],
+];
+
+echo $array['key1']['keyInterno1'];
+
+
+4- Array Multiple
+$arrayMulti2 = [
+    'key1' => [
+        'keyInterno1' => 'valueInterno1',
+        'keyInterno2' => 'valueInterno2',
+    ],
+    'key2' => [
+        0 => 'España',
+        1 => 'Holanda'
+    ];
+];
+
+echo $arrayMulti2['key2'][1];
+
+
+```
+
+# Objeto
+
+```sh
+
+$objeto = new stdClass();
+$objeto->key1 = 'value1';
+
+$objeto->lista = [
+    'key1'=>'value1',
+    'key2'=>'value2',
+];
+
+echo $objeto->key1;
+echo $objeto->lista['key1'];
 
 ```
