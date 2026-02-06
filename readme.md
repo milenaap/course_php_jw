@@ -157,3 +157,16 @@ echo $objeto->key1;
 echo $objeto->lista['key1'];
 
 ```
+
+# API
+
+```sh
+
+1. Metodo index (List)
+response.json($notes); // Ej: En el metodo list para respuesta API (algo parecido)
+
+
+2. Metodo STORE
+response.json($data); // Ej: En el metodo store para respuesta API (algo parecido)
+
+```
