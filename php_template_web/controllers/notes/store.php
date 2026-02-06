@@ -1,15 +1,12 @@
 <?php
 
+use Core\App;
 use Core\Database;
 use Core\Validator;
 
-// connect to our MySQL database
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $errors = [];
-
-
 
 
 if (!Validator::string($_POST['body'], 1, 1000)) {
