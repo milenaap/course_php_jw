@@ -23,10 +23,15 @@ $router->delete('/note', 'controllers/notes/destroy.php');                      
 $router->get('/note/edit', 'controllers/notes/edit.php');                       // Es la vista para editar la nota
 $router->patch('/note','controllers/notes/update.php');                         // Es para actualizar la nota
 
-
+// Notes
 $router->get('/notes/create', 'controllers/notes/create.php');                  // Es para cargar la vista de la nota
 $router->post('/notes', 'controllers/notes/store.php');                         // Es para guardar la nota
 
+// Register
+$router->get('/register', 'controllers/registration/create.php')->only('guest'); 
+$router->post('/register', 'controllers/registration/store.php')->only('guest');                
 
-$router->get('/register', 'controllers/registration/create.php')->only('guest'); // Es para guardar la nota
-$router->post('/register', 'controllers/registration/store.php');                // Es para guardar la nota
+// Login
+$router->get('/login', 'controllers/sessions/create.php')->only('guest');              
+$router->post('/sessions', 'controllers/sessions/store.php')->only('guest');              
+$router->delete('/sessions', 'controllers/sessions/destroy.php')->only('auth');              
