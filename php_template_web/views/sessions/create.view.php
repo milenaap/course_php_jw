@@ -16,7 +16,7 @@
                     <label for="email" class="block text-sm/6 font-medium text-gray-900 dark:text-gray-900">Email address</label>
                     <div class="mt-2">
                         <input
-                            value="darimile@gmail.com"
+                            value="<?= old('email') ?>"
                             id="email"
                             type="email"
                             name="email"
