@@ -81,15 +81,21 @@ class Person {
     }
 }
 
-
-$person = new Person();
+// Cuando se necesita mas de una llamada a metodos o 
+// a atributos
+$person = new Person(); 
 $person->name = 'John Doe';
 $person->age = 40;
 
-
 dd($person->breathe());
 
+// Cuando se necesita  una  unica llamada a un metodo o 
+// a un atributo
+(new Person)->breathe();
+
+
 ```
+
 
 # Array
 

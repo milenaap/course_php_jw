@@ -4,26 +4,6 @@
 
 <main> 
     <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <!-- <p class="mb-6">
-            <a href="/notes" class="text-blue-500 hover:underline">Go back... </a>
-        </p> -->
-
-        <!-- <form method="POST">
-
-            <label for="body">Description</label>
-            <div>
-
-                <textarea id="body" name="body"></textarea>
-
-            </div>
-
-
-            <p>
-
-                <button type="submit">Create</button>
-            </p>
-
-        </form> -->
         <form method="POST" action="/notes">
             <div class="space-y-12">
                 <div class="border-b border-gray-900/10 pb-12 dark:border-white/10">
